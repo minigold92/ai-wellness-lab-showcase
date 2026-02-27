@@ -145,20 +145,23 @@ function isLiveProject(project) {
 }
 
 function init() {
+  if (!projectGrid || !tagFilters || !emptyState) return;
   renderStats();
   renderTagFilters();
   renderProjects(getFilteredProjects());
 }
 
 function renderStats() {
-  totalProjects.textContent = PROJECTS.filter((project) => isLiveProject(project)).length.toString();
-  totalMembers.textContent = new Set(PROJECTS.map((project) => project.member)).size.toString();
+  const liveCount = PROJECTS.filter((project) => isLiveProject(project)).length.toString();
+  const memberCount = new Set(PROJECTS.map((project) => project.member)).size.toString();
+  if (totalProjects) totalProjects.textContent = liveCount;
+  if (totalMembers) totalMembers.textContent = memberCount;
 
   const formatter = new Intl.DateTimeFormat("ko-KR", {
     month: "numeric",
     day: "numeric"
   });
-  todayDate.textContent = formatter.format(new Date());
+  if (todayDate) todayDate.textContent = formatter.format(new Date());
 }
 
 function getTags() {
