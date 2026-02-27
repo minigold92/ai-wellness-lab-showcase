@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI & Wellness Vibe Coding Showcase</title>
+    <meta
+      name="description"
+      content="AI Wellness Lab 멤버들이 만든 GitHub Pages 프로젝트를 한곳에서 공유하는 쇼케이스 페이지"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <header class="topbar container">
+      <a href="#" class="logo" aria-label="홈">
+        <span class="logo-mark">AW</span>
+        <span class="logo-text">AI Wellness Lab</span>
+      </a>
+      <a class="btn btn-ghost" href="#project-grid">프로젝트 보기</a>
+    </header>
+
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="badge">🚀 Today’s Activity • Vibe Coding</p>
+          <h1 id="hero-title">
+            우리가 만든 AI × 웰니스 사이트,
+            <span>한눈에 공유하는 쇼케이스</span>
+          </h1>
+          <p class="hero-description">
+            AI Wellness Lab 멤버들이 각자 만든 GitHub Pages 결과물을 공개하고 설명할 수 있는 페이지예요.
+            발표·회고·재방문까지 모두 고려해 UX를 구성했어요.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#project-grid">지금 둘러보기</a>
+            <a class="btn btn-ghost" href="#how-to-edit">수정 방법 보기</a>
+          </div>
+        </div>
+
+        <aside class="stats-card" aria-label="요약 정보">
+          <h2>오늘의 쇼케이스</h2>
+          <ul>
+            <li>
+              <span>총 프로젝트</span>
+              <strong id="total-projects">0</strong>
+            </li>
+            <li>
+              <span>참여 멤버</span>
+              <strong id="total-members">0</strong>
+            </li>
+            <li>
+              <span>태그 수</span>
+              <strong id="total-tags">0</strong>
+            </li>
+          </ul>
+          <p id="today-date" class="today-date"></p>
+        </aside>
+      </section>
+
+      <section class="controls" aria-label="필터">
+        <label class="search-wrap" for="search-input">
+          <span>🔎</span>
+          <input
+            id="search-input"
+            type="search"
+            placeholder="프로젝트명, 멤버명, 설명으로 검색"
+            autocomplete="off"
+          />
+        </label>
+        <div id="tag-filters" class="tag-filters" role="group" aria-label="태그 필터"></div>
+      </section>
+
+      <section id="project-grid" class="project-grid" aria-live="polite"></section>
+
+      <section class="empty-state hidden" id="empty-state" aria-live="polite">
+        <p>조건에 맞는 프로젝트가 없어요. 검색어나 태그를 바꿔보세요.</p>
+      </section>
+
+      <section id="how-to-edit" class="info-card">
+        <h2>빠른 수정 가이드</h2>
+        <ol>
+          <li><code>script.js</code>의 <code>PROJECTS</code> 배열에 멤버 사이트 정보를 추가</li>
+          <li>저장 후 GitHub에 push</li>
+          <li>GitHub Pages가 자동으로 업데이트</li>
+        </ol>
+        <p>
+          필요하면 카드 디자인/색상은 <code>styles.css</code>, 문구는 <code>index.html</code>에서 수정하면 돼요.
+        </p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Made with 💚 by AI Wellness Lab</p>
+    </footer>
+
+    <dialog id="detail-modal" class="detail-modal">
+      <article>
+        <button class="icon-btn" id="close-modal" aria-label="닫기">✕</button>
+        <p id="modal-member" class="modal-member"></p>
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+        <ul id="modal-highlights" class="modal-highlights"></ul>
+        <a id="modal-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer">사이트 열기</a>
+      </article>
+    </dialog>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
