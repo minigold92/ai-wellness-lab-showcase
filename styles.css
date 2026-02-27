@@ -500,24 +500,106 @@ h1 span {
 }
 
 @media (max-width: 640px) {
+  .container {
+    width: min(1120px, calc(100vw - 1rem));
+  }
+
   .topbar {
-    padding-top: 1rem;
+    padding-top: 0.9rem;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    gap: 0.95rem;
+    margin-top: 0.2rem;
+  }
+
+  .badge {
+    font-size: 0.74rem;
+  }
+
+  h1 {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    line-height: 1.3;
+  }
+
+  .hero-description {
+    margin-top: 0.78rem;
+    font-size: 0.94rem;
+    line-height: 1.66;
+  }
+
+  .stats-card {
+    padding: 0.9rem;
+  }
+
+  .controls {
+    margin-top: 1.1rem;
+    gap: 0.62rem;
+  }
+
+  .search-wrap {
+    padding: 0.68rem 0.8rem;
+  }
+
+  .search-wrap input {
+    font-size: 1rem;
+  }
+
+  .tag-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-width: thin;
+  }
+
+  .tag-button {
+    white-space: nowrap;
+    flex: 0 0 auto;
   }
 
   .project-grid {
     grid-template-columns: 1fr;
+    margin-top: 0.8rem;
   }
 
-  .btn,
+  .project-card {
+    padding: 0.86rem;
+  }
+
+  .actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+  }
+
   .actions .btn {
-    width: 100%;
+    width: auto;
+    padding: 0.54rem 0.6rem;
+    min-height: 42px;
+  }
+
+  .actions .btn-link {
+    grid-column: 1 / -1;
   }
 
   .hero-cta {
     width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .logo-text {
     display: none;
+  }
+
+  .detail-modal article {
+    padding: 0.95rem 0.9rem;
+  }
+
+  .toast {
+    width: calc(100vw - 1rem);
+    text-align: center;
+    border-radius: 0.8rem;
   }
 }

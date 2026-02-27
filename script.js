@@ -139,7 +139,7 @@ function renderDate() {
     day: "numeric",
     weekday: "long"
   });
-  todayDate.textContent = `${formatter.format(new Date())} 쇼케이스 업데이트`;
+  todayDate.textContent = `${formatter.format(new Date())} 갤러리 업데이트`;
 }
 
 function getTags() {
