@@ -1,6 +1,6 @@
 # AI Wellness Lab Showcase (GitHub Pages)
 
-동호회 멤버들이 만든 GitHub Pages 사이트를 한곳에서 공유/소개하는 페이지입니다.
+동호회 멤버들이 자유 주제로 만든 GitHub Pages 사이트를 한곳에서 공유/소개하는 페이지입니다.
 
 ## 파일 구조
 
@@ -20,7 +20,7 @@
   member: "멤버명",
   url: "https://username.github.io/repo-name",
   description: "한 줄 소개",
-  tags: ["AI", "웰니스"],
+  tags: ["포트폴리오", "AI"],
   highlights: ["핵심 기능 1", "핵심 기능 2", "핵심 기능 3"]
 }
 ```

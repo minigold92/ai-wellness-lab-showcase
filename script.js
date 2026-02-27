@@ -1,5 +1,5 @@
 /**
- * 동호회 프로젝트 데이터
+ * 동호회 프로젝트 데이터 (오늘 활동: 자유 주제 바이브코딩)
  * ---------------------------------------------------
  * 1) 아래 배열에 멤버별 객체를 추가하면 카드가 자동 렌더링됩니다.
  * 2) tags는 검색/필터에 사용됩니다.
@@ -7,80 +7,80 @@
 const PROJECTS = [
   {
     id: "p1",
-    title: "AI 감정 저널",
+    title: "Trip Mosaic",
     member: "김하나",
-    url: "https://example.github.io/ai-mood-journal",
-    description: "하루 감정을 기록하고 AI가 맞춤 회복 루틴을 제안하는 마이크로 저널 앱",
-    tags: ["AI", "마음건강", "저널링"],
+    url: "https://example.github.io/trip-mosaic",
+    description: "여행 일정과 장소를 감성적으로 정리해주는 미니 트래블 플래너",
+    tags: ["여행", "지도", "플래너"],
     highlights: [
-      "감정 기록 기반 AI 코칭",
-      "주간 리포트 시각화",
-      "짧은 루틴 중심 UX"
+      "드래그 기반 일정 정리",
+      "장소 카드형 UI",
+      "한 화면 공유 링크"
     ]
   },
   {
     id: "p2",
-    title: "웰니스 브리더",
+    title: "Focus Sprint Timer",
     member: "이서준",
-    url: "https://example.github.io/wellness-breather",
-    description: "집중 회복을 위한 호흡 타이머와 명상 사운드를 제공하는 웹 페이지",
-    tags: ["웰니스", "명상", "집중"],
+    url: "https://example.github.io/focus-sprint-timer",
+    description: "짧은 집중 세션을 빠르게 시작할 수 있는 심플 타이머 페이지",
+    tags: ["생산성", "타이머", "미니앱"],
     highlights: [
-      "4-7-8 호흡 모드",
-      "집중/휴식 자동 전환",
-      "감성적인 사운드 디자인"
+      "25/50분 프리셋",
+      "진행률 시각화",
+      "키보드 단축 조작"
     ]
   },
   {
     id: "p3",
-    title: "식단 인사이트 랩",
+    title: "Meme Studio",
     member: "박민지",
-    url: "https://example.github.io/nutri-insight-lab",
-    description: "식단 입력 후 AI가 영양 균형과 에너지 패턴을 분석해주는 도구",
-    tags: ["AI", "영양", "데이터"],
+    url: "https://example.github.io/meme-studio",
+    description: "짤 템플릿에 텍스트를 얹어 바로 다운로드할 수 있는 밈 메이커",
+    tags: ["엔터테인먼트", "이미지", "크리에이티브"],
     highlights: [
-      "간단한 식단 입력",
-      "영양 밸런스 인사이트",
-      "주간 개선 포인트 추천"
+      "템플릿 1클릭 선택",
+      "폰트·색상 커스터마이징",
+      "PNG 바로 저장"
     ]
   },
   {
     id: "p4",
-    title: "Sleep Reset Coach",
+    title: "Dev Portfolio Onepage",
     member: "정우진",
-    url: "https://example.github.io/sleep-reset-coach",
-    description: "수면 습관 체크리스트와 밤 루틴을 설계해주는 개인형 코치 페이지",
-    tags: ["수면", "습관", "웰니스"],
+    url: "https://example.github.io/dev-portfolio-onepage",
+    description: "프로젝트와 경력을 한 페이지로 보여주는 포트폴리오 템플릿",
+    tags: ["포트폴리오", "개발", "브랜딩"],
     highlights: [
-      "취침 전 루틴 설정",
-      "습관 점수화",
-      "라이트/다크 모드 최적화"
+      "경험 섹션 타임라인",
+      "프로젝트 필터",
+      "연락처 CTA 구성"
     ]
   },
   {
     id: "p5",
-    title: "AI 스트레칭 플래너",
+    title: "Recipe Shuffle",
     member: "최다인",
-    url: "https://example.github.io/stretch-ai-planner",
-    description: "신체 상태와 시간대에 맞는 스트레칭 루틴을 자동 추천하는 사이트",
-    tags: ["AI", "운동", "루틴"],
+    url: "https://example.github.io/recipe-shuffle",
+    description: "냉장고 재료를 넣으면 빠르게 요리 아이디어를 보여주는 레시피 탐색 웹",
+    tags: ["요리", "검색", "라이프"],
     highlights: [
-      "상태별 맞춤 스트레칭",
-      "타이머 기반 따라하기",
-      "완료 뱃지 시스템"
+      "재료 태그 검색",
+      "조리시간 필터",
+      "즐겨찾기 저장"
     ]
   },
   {
     id: "p6",
-    title: "Mindful Prompt Garden",
+    title: "Movie Night Picker",
     member: "오지수",
-    url: "https://example.github.io/mindful-prompt-garden",
-    description: "하루 질문 프롬프트와 리플렉션 문장을 제공하는 디지털 가든",
-    tags: ["리플렉션", "마인드풀니스", "글쓰기"],
+    url: "https://example.github.io/movie-night-picker",
+    description: "장르와 분위기를 고르면 볼만한 영화를 랜덤 추천해주는 페이지",
+    tags: ["취미", "추천", "영화"],
     highlights: [
-      "Daily Prompt 카드",
-      "따뜻한 인터랙션 애니메이션",
-      "회고 중심의 미니멀 UI"
+      "랜덤 추천 버튼",
+      "장르별 필터링",
+      "친구와 공유하기"
     ]
   }
 ];
@@ -221,8 +221,8 @@ function renderProjects(projects) {
 function makePreviewGradient(seed) {
   const hash = [...seed].reduce((acc, char) => acc + char.charCodeAt(0), 0);
   const hueA = hash % 360;
-  const hueB = (hash * 1.6) % 360;
-  return `background: linear-gradient(135deg, hsla(${hueA}, 75%, 55%, 0.88), hsla(${hueB}, 78%, 46%, 0.92));`;
+  const hueB = (hash * 1.3) % 360;
+  return `background: linear-gradient(135deg, hsl(${hueA}, 52%, 88%), hsl(${hueB}, 48%, 82%));`;
 }
 
 function handleProjectGridClick(event) {
