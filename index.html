@@ -6,7 +6,7 @@
     <title>AI Wellness Lab | Vibe Coding Gallery</title>
     <meta
       name="description"
-      content="AI Wellness Lab 멤버들이 자유 주제로 만든 웹 프로젝트를 공유하는 갤러리 페이지"
+      content="AI Wellness Lab 멤버들이 자유 주제로 만든 웹 프로젝트를 공유하는 프로젝트 갤러리"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,95 +25,52 @@
         <span class="logo-mark">AW</span>
         <span class="logo-text">AI Wellness Lab</span>
       </a>
-      <a class="btn btn-ghost" href="#project-grid">프로젝트 보기</a>
     </header>
 
     <main class="container">
       <section class="hero" aria-labelledby="hero-title">
-        <div>
-          <p class="badge">☁️ 오늘의 활동 · 자유 주제 바이브코딩</p>
-          <h1 id="hero-title">
-            오늘 만든 웹 프로젝트를
-            <span>한눈에 공유하는 프로젝트 갤러리</span>
-          </h1>
-          <p class="hero-description">
-            오늘은 웰니스 주제에 제한 없이, 각자가 만들고 싶은 웹을 바이브코딩으로 제작했어요.
-            이 페이지에서 결과물을 빠르게 공유하고 발표할 수 있어요.
-          </p>
-          <div class="hero-cta">
-            <a class="btn btn-primary" href="#project-grid">지금 둘러보기</a>
-            <a class="btn btn-ghost" href="#how-to-edit">수정 방법 보기</a>
-          </div>
-        </div>
+        <p class="badge">☁️ 자유 주제 바이브코딩 결과</p>
+        <h1 id="hero-title">
+          오늘 만든 웹 프로젝트를
+          <span>한곳에 모은 갤러리</span>
+        </h1>
+        <p class="hero-description">
+          이번 라운드는 각자 만들고 싶은 주제로 진행했습니다.
+          복잡한 기능은 덜고, 결과물을 편하게 둘러보는 데 집중했어요.
+        </p>
+        <a class="btn btn-primary" href="#project-grid">프로젝트 둘러보기</a>
+      </section>
 
-        <aside class="stats-card" aria-label="요약 정보">
-          <h2>오늘의 프로젝트 갤러리</h2>
-          <ul>
-            <li>
-              <span>총 프로젝트</span>
-              <strong id="total-projects">0</strong>
-            </li>
-            <li>
-              <span>참여 멤버</span>
-              <strong id="total-members">0</strong>
-            </li>
-            <li>
-              <span>태그 수</span>
-              <strong id="total-tags">0</strong>
-            </li>
-          </ul>
-          <p id="today-date" class="today-date"></p>
-        </aside>
+      <section class="summary-row" aria-label="요약 정보">
+        <article class="summary-item">
+          <span>공개 프로젝트</span>
+          <strong id="total-projects">0</strong>
+        </article>
+        <article class="summary-item">
+          <span>참여 코드네임</span>
+          <strong id="total-members">0</strong>
+        </article>
+        <article class="summary-item">
+          <span>업데이트</span>
+          <strong id="today-date">-</strong>
+        </article>
       </section>
 
       <section class="controls" aria-label="필터">
-        <label class="search-wrap" for="search-input">
-          <span>🔎</span>
-          <input
-            id="search-input"
-            type="search"
-            placeholder="프로젝트명, 멤버명, 설명으로 검색"
-            autocomplete="off"
-          />
-        </label>
+        <p class="controls-title">주제별 보기</p>
         <div id="tag-filters" class="tag-filters" role="group" aria-label="태그 필터"></div>
       </section>
 
       <section id="project-grid" class="project-grid" aria-live="polite"></section>
 
       <section class="empty-state hidden" id="empty-state" aria-live="polite">
-        <p>조건에 맞는 프로젝트가 없어요. 검색어나 태그를 바꿔보세요.</p>
-      </section>
-
-      <section id="how-to-edit" class="info-card">
-        <h2>빠른 업데이트 가이드</h2>
-        <ol>
-          <li><code>script.js</code>의 <code>PROJECTS</code> 배열에 멤버 사이트 정보를 추가</li>
-          <li>저장 후 GitHub에 push</li>
-          <li>GitHub Pages가 자동으로 업데이트</li>
-        </ol>
-        <p>
-          현재는 샘플 데이터가 들어가 있어요. 실제 URL/멤버 정보 공유 후 바로 교체하면 됩니다.
-        </p>
+        <p>해당 태그에 맞는 프로젝트가 아직 없어요.</p>
       </section>
     </main>
 
     <footer class="container footer">
       <p>Made with 💚 by AI Wellness Lab</p>
     </footer>
-
-    <dialog id="detail-modal" class="detail-modal">
-      <article>
-        <button class="icon-btn" id="close-modal" aria-label="닫기">✕</button>
-        <p id="modal-member" class="modal-member"></p>
-        <h3 id="modal-title"></h3>
-        <p id="modal-description"></p>
-        <ul id="modal-highlights" class="modal-highlights"></ul>
-        <a id="modal-link" class="btn btn-primary" target="_blank" rel="noopener noreferrer">사이트 열기</a>
-      </article>
-    </dialog>
-
-    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
   </body>

@@ -1,12 +1,14 @@
 # AI Wellness Lab Gallery (GitHub Pages)
 
 동호회 멤버들이 자유 주제로 만든 GitHub Pages 사이트를 한곳에서 공유/소개하는 페이지입니다.
+실명 대신 코드네임(가명)으로 표기하고, 사이트 캡처 이미지를 카드로 보여줍니다.
 
 ## 파일 구조
 
 - `index.html` : 페이지 구조
 - `styles.css` : UI/UX 스타일
-- `script.js` : 프로젝트 데이터 + 검색/필터/모달 기능
+- `script.js` : 프로젝트 데이터 + 태그 필터 렌더링
+- `assets/screenshots/*` : 프로젝트 미리보기 캡처 이미지
 
 ## 멤버 사이트 추가 방법
 
@@ -20,8 +22,8 @@
   member: "멤버명",
   url: "https://username.github.io/repo-name",
   description: "한 줄 소개",
-  tags: ["포트폴리오", "AI"],
-  highlights: ["핵심 기능 1", "핵심 기능 2", "핵심 기능 3"]
+  image: "assets/screenshots/project-15.jpg",
+  tags: ["추천"]
 }
 ```
 
