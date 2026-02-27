@@ -141,14 +141,14 @@ h1 span {
   background: var(--primary-strong);
 }
 
-.summary-row {
+.meta-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.7rem;
   margin-top: 0.2rem;
 }
 
-.summary-item {
+.meta-item {
   border: 1px solid var(--border);
   background: var(--surface);
   border-radius: 0.95rem;
@@ -156,13 +156,13 @@ h1 span {
   box-shadow: var(--shadow);
 }
 
-.summary-item span {
+.meta-item span {
   display: block;
   color: var(--muted);
   font-size: 0.83rem;
 }
 
-.summary-item strong {
+.meta-item strong {
   display: block;
   margin-top: 0.18rem;
   font-size: 1.1rem;
@@ -357,7 +357,7 @@ h1 span {
     width: 100%;
   }
 
-  .summary-row {
+  .meta-strip {
     grid-template-columns: 1fr;
   }
 
