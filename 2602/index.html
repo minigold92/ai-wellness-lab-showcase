@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Wellness Lab | Vibe Coding Gallery</title>
+    <meta
+      name="description"
+      content="AI Wellness Lab 멤버들이 자유 주제로 만든 웹 프로젝트를 공유하는 프로젝트 갤러리"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+    <header class="topbar container">
+      <a href="#" class="logo" aria-label="홈">
+        <span class="logo-mark">AW</span>
+        <span class="logo-text">AI Wellness Lab</span>
+      </a>
+    </header>
+
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="badge">AI Wellness Lab</p>
+        <h1 id="hero-title">Vibe Coding <span>Project Gallery</span></h1>
+        <p class="hero-description">참여 작품을 빠르게 열어보고 비교할 수 있는 프로젝트 보드입니다.</p>
+        <a class="btn btn-primary" href="#project-grid">프로젝트 둘러보기</a>
+      </section>
+
+      <section class="meta-strip" aria-label="요약 정보">
+        <article class="meta-item">
+          <span>공개 프로젝트</span>
+          <strong id="total-projects">0</strong>
+        </article>
+        <article class="meta-item">
+          <span>참여 닉네임</span>
+          <strong id="total-members">0</strong>
+        </article>
+        <article class="meta-item">
+          <span>업데이트</span>
+          <strong id="today-date">-</strong>
+        </article>
+      </section>
+
+      <section class="controls" aria-label="필터">
+        <p class="controls-title">주제별 보기</p>
+        <div id="tag-filters" class="tag-filters" role="group" aria-label="태그 필터"></div>
+      </section>
+
+      <section id="project-grid" class="project-grid" aria-live="polite"></section>
+
+      <section class="empty-state hidden" id="empty-state" aria-live="polite">
+        <p>해당 태그에 맞는 프로젝트가 아직 없어요.</p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <p>Made with 💚 by AI Wellness Lab</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

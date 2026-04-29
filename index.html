@@ -3,69 +3,114 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Wellness Lab | Vibe Coding Gallery</title>
+    <title>AI Wellness Lab — 활동 기록</title>
     <meta
       name="description"
-      content="AI Wellness Lab 멤버들이 자유 주제로 만든 웹 프로젝트를 공유하는 프로젝트 갤러리"
+      content="AI Wellness Lab 동호회의 정기 활동 기록 — 바이브코딩 프로젝트 갤러리, NotebookLM 지식공유 등"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&family=DM+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
-    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+    <div class="hero-wash" aria-hidden="true"></div>
 
     <header class="topbar container">
-      <a href="#" class="logo" aria-label="홈">
+      <a href="#" class="logo" aria-label="AI Wellness Lab">
         <span class="logo-mark">AW</span>
         <span class="logo-text">AI Wellness Lab</span>
       </a>
+      <nav class="topnav" aria-label="동호회 정체성">
+        <span class="topnav-pill">CLUB · SINCE 2026</span>
+      </nav>
     </header>
 
     <main class="container">
       <section class="hero" aria-labelledby="hero-title">
-        <p class="badge">AI Wellness Lab</p>
-        <h1 id="hero-title">Vibe Coding <span>Project Gallery</span></h1>
-        <p class="hero-description">참여 작품을 빠르게 열어보고 비교할 수 있는 프로젝트 보드입니다.</p>
-        <a class="btn btn-primary" href="#project-grid">프로젝트 둘러보기</a>
+        <p class="kicker">
+          <span class="kicker-dot" aria-hidden="true"></span>
+          <span class="kicker-label">AI 기술과 건강을 챙기는 동호회</span>
+        </p>
+        <h1 id="hero-title">
+          AI Wellness<br /><span>Lab</span>
+        </h1>
+        <p class="hero-description">
+          최신 AI 도구를 함께 다뤄보고, 그 옆에 우리 일상의 건강도 같이 들여다봅니다.
+          매 회차의 기록과 결과물을 이곳에 모아 두고 있어요. 관심 가는 회차를 골라 들어가 보세요.
+        </p>
+        <div class="hero-pillars" aria-label="동호회 두 축">
+          <span class="pillar"><span class="pillar-num">01</span><span class="pillar-text">AI 기술 실습</span></span>
+          <span class="pillar-sep" aria-hidden="true">·</span>
+          <span class="pillar"><span class="pillar-num">02</span><span class="pillar-text">건강한 일상</span></span>
+        </div>
       </section>
 
-      <section class="meta-strip" aria-label="요약 정보">
-        <article class="meta-item">
-          <span>공개 프로젝트</span>
-          <strong id="total-projects">0</strong>
-        </article>
-        <article class="meta-item">
-          <span>참여 닉네임</span>
-          <strong id="total-members">0</strong>
-        </article>
-        <article class="meta-item">
-          <span>업데이트</span>
-          <strong id="today-date">-</strong>
-        </article>
-      </section>
+      <section class="activities" aria-labelledby="activities-title">
+        <h2 id="activities-title">
+          <span class="eyebrow">timeline</span>활동 기록
+        </h2>
 
-      <section class="controls" aria-label="필터">
-        <p class="controls-title">주제별 보기</p>
-        <div id="tag-filters" class="tag-filters" role="group" aria-label="태그 필터"></div>
-      </section>
+        <a class="activity-card activity-card-amber" href="2604/" aria-label="2026년 4월 29일 NotebookLM 활동으로 이동">
+          <div class="activity-meta">
+            <span class="activity-date">2026.04.29</span>
+            <span class="activity-tag">지식공유</span>
+          </div>
+          <h3 class="activity-title">
+            NotebookLM <em>관심 주제 PDF</em>
+          </h3>
+          <p class="activity-desc">
+            최봉우 매니저의 노트북LM 활용 발표 — 데이터 정제부터 기업용 슬라이드 제작까지.
+            멤버들이 각자 관심 주제로 만든 12편의 PDF를 공유했습니다.
+          </p>
+          <ul class="activity-stats">
+            <li><strong>12</strong><span>편의 PDF</span></li>
+            <li><strong>38</strong><span>분 발표</span></li>
+            <li><strong>5</strong><span>개 핵심 정리</span></li>
+          </ul>
+          <span class="activity-cta">자세히 보기 →</span>
+        </a>
 
-      <section id="project-grid" class="project-grid" aria-live="polite"></section>
+        <a class="activity-card activity-card-green" href="2602/" aria-label="2026년 2월 바이브코딩 갤러리로 이동">
+          <div class="activity-meta">
+            <span class="activity-date">2026.02</span>
+            <span class="activity-tag">프로젝트 갤러리</span>
+          </div>
+          <h3 class="activity-title">
+            Vibe Coding <em>Project Gallery</em>
+          </h3>
+          <p class="activity-desc">
+            멤버 각자가 자유 주제로 만든 웹 프로젝트를 모은 첫 번째 활동.
+            MBTI 검사, 운세 카드, 룰렛, 맛집 추천 등 13개의 결과물이 담겨 있어요.
+          </p>
+          <ul class="activity-stats">
+            <li><strong>13</strong><span>개 프로젝트</span></li>
+            <li><strong>14</strong><span>명 참여</span></li>
+            <li><strong>5</strong><span>개 카테고리</span></li>
+          </ul>
+          <span class="activity-cta">갤러리 둘러보기 →</span>
+        </a>
 
-      <section class="empty-state hidden" id="empty-state" aria-live="polite">
-        <p>해당 태그에 맞는 프로젝트가 아직 없어요.</p>
+        <article class="activity-card activity-card-placeholder" aria-label="다음 활동 예정">
+          <div class="activity-meta">
+            <span class="activity-date">다음 회차</span>
+            <span class="activity-tag">예정</span>
+          </div>
+          <h3 class="activity-title">곧 새 활동이 추가됩니다</h3>
+          <p class="activity-desc">
+            함께 만들고 싶은 주제가 있으면 단톡방에 언제든 던져 주세요.
+          </p>
+        </article>
       </section>
     </main>
 
     <footer class="container footer">
-      <p>Made with 💚 by AI Wellness Lab</p>
+      <div class="footer-rule" aria-hidden="true"></div>
+      <p class="footer-mark">AI Wellness Lab</p>
+      <p class="footer-tag">기술과 건강 사이에서 — Made with care</p>
     </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>

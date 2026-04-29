@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotebookLM 활동 | AI Wellness Lab</title>
+    <meta
+      name="description"
+      content="2026년 4월 29일 AI Wellness Lab 멤버들이 NotebookLM으로 만든 PDF 모음과 교육 스크립트"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&family=Noto+Serif+KR:wght@500;700&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar container">
+      <a href="../" class="logo" aria-label="홈으로">
+        <span class="logo-mark">AW</span>
+        <span class="logo-text">AI Wellness Lab</span>
+      </a>
+    </header>
+
+    <main class="container">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="kicker">
+          <span class="kicker-date">2026.04.29</span>
+          <span class="kicker-dot" aria-hidden="true"></span>
+          <span class="kicker-label">AI Wellness Lab 활동 기록</span>
+        </p>
+        <h1 id="hero-title">NotebookLM<br /><span>관심 주제 PDF</span></h1>
+        <p class="hero-description">
+          멤버 각자가 관심 있는 주제를 NotebookLM으로 정리해 PDF로 만들었습니다.
+          오늘의 지식공유 요약과 함께, 모두의 결과물을 한곳에서 살펴보세요.
+        </p>
+        <ul class="hero-stats" aria-label="요약">
+          <li><strong>12</strong><span>편의 PDF</span></li>
+          <li><strong>38</strong><span>분 발표</span></li>
+          <li><strong>1</strong><span>일의 기록</span></li>
+        </ul>
+      </section>
+
+      <section class="guide-section" aria-labelledby="guide-title">
+        <h2 id="guide-title"><span class="eyebrow">발표자료</span>교육 안내 자료</h2>
+        <div id="guide-slot" class="guide-slot"></div>
+      </section>
+
+      <section class="activity-section" aria-labelledby="activity-title">
+        <h2 id="activity-title"><span class="eyebrow">log</span>활동일지</h2>
+        <article class="info-card">
+          <dl class="activity-meta">
+            <div><dt>일시</dt><dd>2026.04.29 (수) · 약 38분</dd></div>
+            <div><dt>주제</dt><dd>실무자를 위한 노트북LM 활용 가이드</dd></div>
+            <div><dt>진행자</dt><dd>최봉우 매니저</dd></div>
+            <div><dt>흐름</dt><dd>지식공유 발표 → 각자 관심 주제로 PDF 제작 → 단톡방 공유</dd></div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="knowledge-section" aria-labelledby="knowledge-title">
+        <h2 id="knowledge-title"><span class="eyebrow">share</span>지식공유 요약</h2>
+        <details class="kb-toggle">
+          <summary>
+            <span class="kb-toggle-meta">
+              <span class="kb-toggle-label">노트북LM 핵심 정리</span>
+              <span class="kb-toggle-sub">5개 카드 · 약 2분 읽기</span>
+            </span>
+            <span class="kb-toggle-hint">펼쳐 보기</span>
+          </summary>
+          <div class="kb-toggle-body">
+
+        <article class="kb-card">
+          <h3>왜 노트북LM인가</h3>
+          <p>일반 LLM은 웹 검색에 기대다 보니 <strong>할루시네이션</strong>이 생긴다. 노트북LM은 <strong>RAG 방식</strong>으로 사용자가 지정한 소스 안에서만 답해 할루시네이션이 줄어든다 — 오픈북 시험 환경에 가깝다.</p>
+          <p>소스 한도: 무료 <strong>50개</strong> · 유료 <strong>300개</strong>. PDF·웹페이지·구글 드라이브·유튜브 다 입력 가능.</p>
+        </article>
+
+        <article class="kb-card">
+          <h3>핵심 워크플로우</h3>
+          <ol>
+            <li>노트북 생성 → 소스 추가</li>
+            <li>Gemini 3.1 Flash로 대화하며 정제</li>
+            <li><strong>스튜디오</strong>에서 산출물(보고서·마인드맵·오디오·동영상·슬라이드·퀴즈·데이터 테이블) 생성</li>
+            <li><strong>메모 순환</strong>: 대화 결과를 메모로 저장 → 다시 소스로 변환해서 자료 보강</li>
+          </ol>
+        </article>
+
+        <article class="kb-card">
+          <h3>소스 정제 팁</h3>
+          <ul>
+            <li>북마크 URL은 <strong>일괄 붙여넣기</strong>로 한 번에 추가</li>
+            <li>키워드만 주면 AI가 검색해 옴 — <strong>Fast Research</strong>(50개)·<strong>Deep Research</strong>(300개)</li>
+            <li>"신뢰도 점수 매겨줘"로 가비지 소스 솎아내기</li>
+            <li>신규 <strong>자동 라벨링</strong> 버튼으로 소스를 기능·비용·성능 등으로 분류</li>
+          </ul>
+        </article>
+
+        <article class="kb-card">
+          <h3>슬라이드, 진짜 핵심은 커스터마이징</h3>
+          <p>기본 생성 슬라이드는 베이지·회색 파스텔에 모눈 배경 — 한눈에 "노트북LM 티"가 난다. 크롬 확장으로 옷을 입히자.</p>
+          <ul>
+            <li><strong>Banana NL</strong> — 칠판·픽셀·미니어처·만화 등 스타일 선택</li>
+            <li><strong>한국 기업 스타일</strong> (최봉우 매니저 직접 제작) — 삼성·SK·LG·현대차·<strong>KB금융</strong>·네이버 컬러로 자동 생성</li>
+          </ul>
+          <p><strong>목차 고정 팁</strong>: "목차 짜줘" → 메모로 저장 → <strong>소스로 변환</strong> → 슬라이드 생성. 순서 흔들림 방지.</p>
+        </article>
+
+        <article class="kb-card">
+          <h3>만들어진 슬라이드 수정하기</h3>
+          <p>슬라이드는 사실 Nano Banana로 만든 <strong>이미지</strong>라 원래는 편집이 어려웠다.</p>
+          <ul>
+            <li><strong>부분 재생성</strong> — 슬라이드를 지목하고 "이 문구 빼줘" 식으로 지시 (디자인은 약간 흔들릴 수 있음)</li>
+            <li><strong>PPT 다운로드 + PowerPoint 그림 편집 → 텍스트 편집</strong> — OCR로 이미지 속 텍스트를 뽑아내 직접 수정</li>
+          </ul>
+        </article>
+
+        <article class="kb-card kb-card-callout">
+          <h3>오늘의 실습 미션</h3>
+          <p>각자 <strong>관심 주제로 자료를 모아 노트북LM에 넣고, 원하는 스타일로 PPT 제작</strong> → 단톡방 공유. 스타일·주제 모두 자유. 아래 카드들이 그 결과물입니다.</p>
+        </article>
+          </div>
+        </details>
+      </section>
+
+      <section class="pdf-section" aria-labelledby="pdf-title">
+        <h2 id="pdf-title"><span class="eyebrow">gallery</span>멤버 관심 주제 PDF</h2>
+        <p class="section-description">각자의 호기심이 모인 결과물 — 카드를 누르면 새 탭에서 PDF가 열립니다.</p>
+        <div id="pdf-grid" class="pdf-grid" aria-live="polite"></div>
+        <p id="pdf-empty" class="empty-state hidden">PDF가 곧 업로드됩니다.</p>
+      </section>
+    </main>
+
+    <footer class="container footer">
+      <div class="footer-rule" aria-hidden="true"></div>
+      <p>Made with care by AI Wellness Lab · <time datetime="2026-04-29">2026.04.29</time></p>
+    </footer>
+
+    <dialog class="pdf-viewer" id="pdf-viewer" aria-label="PDF 미리보기">
+      <div class="pdf-viewer-panel">
+        <header class="pdf-viewer-bar">
+          <p class="pdf-viewer-title" id="pdf-viewer-title">PDF</p>
+          <div class="pdf-viewer-actions">
+            <a class="pdf-viewer-btn pdf-viewer-btn-ghost" id="pdf-viewer-open" href="#" target="_blank" rel="noopener noreferrer">새 탭에서 열기 ↗</a>
+            <button class="pdf-viewer-btn pdf-viewer-close" type="button" id="pdf-viewer-close" aria-label="뷰어 닫기">✕</button>
+          </div>
+        </header>
+        <iframe class="pdf-viewer-frame" id="pdf-viewer-frame" title="PDF 뷰어" src="about:blank"></iframe>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
