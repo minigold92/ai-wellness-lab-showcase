@@ -135,18 +135,36 @@ const viewerOpen = document.getElementById("pdf-viewer-open");
 const viewerClose = document.getElementById("pdf-viewer-close");
 
 function shouldUseInlineViewer() {
-  if (!viewer || typeof viewer.showModal !== "function") return false;
-  if (window.innerWidth < 720) return false;
-  // iOS Safari (iPhone/iPad) doesn't render PDFs inside iframe reliably.
+  return !!viewer && typeof viewer.showModal === "function";
+}
+
+function isMobileLike() {
   const ua = navigator.userAgent || "";
-  if (/iPhone|iPod/.test(ua)) return false;
-  if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return false;
-  return true;
+  if (/iPhone|iPod|Android/.test(ua)) return true;
+  // Modern iPad reports as Macintosh with touch points
+  if (/iPad/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return true;
+  return window.innerWidth < 720;
+}
+
+function viewerSrcFor(href) {
+  // Mobile / iOS / Android: native iframe PDFs are unreliable.
+  // Use Google Docs Viewer to render PDF as scrollable images.
+  // Requires the PDF URL to be publicly reachable (GitHub Pages is fine).
+  if (!isMobileLike()) return href;
+  try {
+    const absolute = new URL(href, window.location.href).href;
+    const host = new URL(absolute).hostname;
+    const isLocal = host === "localhost" || host === "127.0.0.1" || host === "0.0.0.0";
+    if (isLocal) return href; // local dev — use direct
+    return "https://docs.google.com/gview?embedded=true&url=" + encodeURIComponent(absolute);
+  } catch (_e) {
+    return href;
+  }
 }
 
 function openViewer(href, title) {
   if (!viewer) return;
-  viewerFrame.src = href;
+  viewerFrame.src = viewerSrcFor(href);
   viewerTitle.textContent = title || "PDF";
   viewerOpen.href = href;
   viewer.showModal();
